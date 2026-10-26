@@ -1,7 +1,8 @@
 DEVICE_PATH := device/samsung/m20lte
 
 # Camera
-$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,10)
+# libexynoscamera wants the pre-10 ExynosJpegEncoderForCamera(bool) constructor
+$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,9)
 
 # Kernel
 BOARD_KERNEL_SEPARATED_DT := true
