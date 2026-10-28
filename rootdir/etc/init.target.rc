@@ -5,6 +5,9 @@ on init
     # Google FRP solution
     symlink /dev/block/platform/13500000.dwmmc0/by-name/PERSISTENT /dev/block/persistent
  
+on init && property:ro.product.device=m20lte && property:ro.boot.product.hardware.sku=
+    stop vendor.samsung_nfc_hal_service
+
 on boot
     # Permissions for NAD
     symlink /dev/block/platform/13500000.dwmmc0/by-name/NAD_REFER /dev/block/NAD_REFER

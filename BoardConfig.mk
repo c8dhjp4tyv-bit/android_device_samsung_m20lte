@@ -36,3 +36,4 @@ include device/samsung/universal7904-common/BoardConfigCommon.mk
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/android.hardware.keymaster@3.0-service.xml
+ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/manifest_no_nfc.xml
