@@ -95,5 +95,11 @@ void vendor_load_properties() {
     set_ro_build_prop("model", model);
     set_ro_build_prop("product", model, false);
 
+    if (model == "SM-M205FN") {
+        property_override("ro.boot.product.hardware.sku", "NFC");
+    } else if (model == "SM-M205F") {
+        property_override("ro.boot.product.hardware.sku", "");
+    }
+
     set_low_ram_config();
 }
